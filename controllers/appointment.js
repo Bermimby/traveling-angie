@@ -4,8 +4,7 @@ module.exports = {
   index,
   create,
   delete: deleteAppointment,
-  update,
-  show,
+  update
 };
 
 async function index(req, res) {
@@ -31,10 +30,4 @@ async function deleteAppointment(req, res) {
 async function update(req, res) {
   const updAppointment = await Appointment.findByIdAndUpdate(req.params.id, req.body);
   return res.json(updAppointment)
-}
-
-async function show(req, res) {
-  const oneAppointment= await Appointment.findById(req.params.selectedAppointment)
-  return res.json(oneAppointment)
-
 }

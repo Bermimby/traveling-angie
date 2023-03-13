@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import * as appointmentsAPI from '../../utilities/appointments-api'
 
 export default function AppointmentForm({addAppointment}) {
     const [appointmentForm, setAppointmentForm] = useState({
@@ -13,7 +12,9 @@ export default function AppointmentForm({addAppointment}) {
         evt.preventDefault()
         addAppointment(appointmentForm)
         setAppointmentForm({
-            name: ''
+        date: '',
+        appointmentTime: '',
+        location:'',
         })
     }
 

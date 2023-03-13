@@ -16,7 +16,3 @@ export function deleteAppointment (appointment) {
 export function updateAppointment (appointment, updateAppointmentData) {
     return sendRequest(`${BASE_URL}/${appointment}`, 'PUT', updateAppointmentData)
 }
-
-export function getOneAppointment (selectedAppointment) {
-    return sendRequest(`${BASE_URL}/${selectedAppointment}`)
-}
