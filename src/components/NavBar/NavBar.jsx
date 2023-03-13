@@ -10,7 +10,7 @@ export default function NavBar({ user }, { setUser }) {
   }
   return (
     <nav>
-      <Link to="/AppointmentsPage">Book an Appointment</Link>
+      <Link to="/">Home</Link>
       <span>Welcome, {user.name}</span>
       &nbsp;&nbsp;
       <Link to="" onClick={handleLogOut}>

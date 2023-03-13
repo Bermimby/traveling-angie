@@ -4,16 +4,12 @@ const Schema = mongoose.Schema;
 const appointmentSchema = new Schema({
     date: { 
         type: Date, 
-        default: null, 
-        required: true 
     },
     appointmentTime: { 
-        type: Date, 
-        required: true 
+        type: String, 
     },
     location: { 
         type: String, 
-        required: true 
     }
 }, {
     timestamps: true
