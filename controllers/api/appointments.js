@@ -13,6 +13,7 @@ async function index(req, res) {
     appointment = await Appointment.find({user : req.user._id})
   }
   res.json(appointment)
+  console.log(appointment)
 }
 
 async function create(req, res) {
