@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
-const appointmentsCtrl = require('../../controllers/api/appointments');
+const appointmentsCtrl = require('../../controllers/api/appointment');
 
 
 router.get('/index', ensureLoggedIn, appointmentsCtrl.index);
