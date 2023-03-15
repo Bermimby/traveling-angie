@@ -5,6 +5,7 @@ import { getUser } from "../../utilities/users-services";
 import AuthPage from "../AuthPage/AuthPage";
 import AppointmentPage from "../AppointmentPage/AppointmentPage";
 import NavBar from "../../components/NavBar/NavBar";
+import AppointmentsList from "../../components/AppointmentsList/AppointmentsList" 
 import * as appointmentsAPI from "../../utilities/appointments-api";
 
 export default function App() {
@@ -48,7 +49,7 @@ export default function App() {
       (appointment) => appointment._id === appointmentId
     );
     const newAppointments = [...appointment];
-    newAppointments[foundAppointment] = newUpdatedAppointment;
+    newAppointments.splice(foundAppointment, 1, newUpdatedAppointment)
     setAppointment(newAppointments);
   }
 
@@ -65,8 +66,16 @@ export default function App() {
                   user={user}
                   appointment={appointment}
                   addAppointment={addAppointment}
-                  updateAppointment={updateAppointment}
-                  deleteAppointment={deleteAppointment}
+                />
+              }
+            />
+            <Route
+              path="/appointments"
+              element={
+                <AppointmentsList
+                  appointment={appointment}
+                  deleteAppointment={deleteAppointment} 
+                  updateAppointment={updateAppointment} 
                 />
               }
             />

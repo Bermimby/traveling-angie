@@ -6,7 +6,8 @@ export default function AppointmentsList({
   deleteAppointment,
 }) {
   return (
-    <>
+    <> 
+      <h1>Appointment List</h1>
       {appointment.map((appointment, idx) => (
         <>
           <p>{appointment.date}</p>
