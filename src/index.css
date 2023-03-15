@@ -1,16 +1,14 @@
 /* CSS Custom Properties */
 :root {
-  
-    --white: #FFFFFF;
-    --tan-1: #FCE8E8;
-    --tan-2: #F9C5C5;
-    --tan-3: #F3A3A3;
-    --tan-4: #D88989;
-    --orange: #F67F00;
-    --text-light: #000000;
-    --text-dark: #BF6D85;
-  }
-  
+  --white: #FFFFFF;
+  --tan-1: #FCE8E8;
+  --tan-2: #F9C5C5;
+  --tan-3: #F3A3A3;
+  --tan-4: #D88989;
+  --orange: #F67F00;
+  --text-light: #000000;
+  --text-dark: #BF6D85;
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -26,6 +24,8 @@ body {
   background-color: var(--tan-4);
   padding: 2vmin;
   height: 100vh;
+  background-image: url('https://t3.ftcdn.net/jpg/01/05/08/02/240_F_105080277_d9Bj78ybdwIKHn1lZHFStEsmCydMkJhD.jpg');
+  background-size: cover;
 }
 
 code {
@@ -131,28 +131,4 @@ button, a.button {
   border: .1vmin solid var(--tan-2);
   border-radius: .5vmin;
   outline: none;
-  cursor: pointer;
 }
-
-button.btn-sm {
-  font-size: 1.5vmin;
-  padding: .6vmin .8vmin;
-}
-
-button.btn-xs {
-  font-size: 1vmin;
-  padding: .4vmin .5vmin;
-}
-
-button:disabled, form:invalid button[type="submit"] {
-  cursor: not-allowed;
-  background-color: var(--tan-4);
-}
-
-button[type="submit"] {
-  grid-column: span 2;
-  margin: 1vmin 0 0;
-  color:#F9C5C5
-}
-
-
