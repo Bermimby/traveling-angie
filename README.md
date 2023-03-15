@@ -3,7 +3,7 @@ Traveling Angie was made for a friend who has a cleaning company.One day when he
 
 
 
-This application was built by using the MERN stack
+This application was built by using the MERN stack(MongoDB,Express,React,Node)
 
 
 
